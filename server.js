@@ -50,6 +50,13 @@ app.get('/about', (request, response) => {
     })
 })
 
+app.get('/projects', (request, response) => {
+    response.render('projects.hbs', {
+        pageTitle: 'Projects and Bio page',
+        pageMessage: 'Here you can find some links for projects and bio info'
+    })
+})
+
 app.get('/bad', (request, response) => {
     response.send({
         errorMessage: "Upps Something get wrong :(",
